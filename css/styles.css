@@ -360,6 +360,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 1139px) {
   .main-nav {
+    display: block;
     position: absolute;
     top: 76px; left: 0; right: 0;
     background: var(--color-white);
@@ -398,11 +399,46 @@ h1, h2, h3, h4 {
    HERO
    ============================================================= */
 .hero {
+  position: relative;
   padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3rem, 7vw, 6rem);
   overflow: hidden;
+  isolation: isolate;
+  background-color: #1e3944;
+  background-image:
+    radial-gradient(ellipse 85% 65% at 15% -10%, rgba(244, 162, 97, 0.20), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 105% 20%, rgba(96, 150, 163, 0.45), transparent 65%),
+    radial-gradient(ellipse 55% 50% at 85% 100%, rgba(0, 0, 0, 0.22), transparent 60%),
+    linear-gradient(155deg, #2d5566 0%, #264653 45%, #1a323d 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 25% 15%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(ellipse 70% 70% at 25% 15%, #000 0%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: min(46vw, 560px);
+  aspect-ratio: 1;
+  right: clamp(-160px, -8vw, -40px);
+  top: -18%;
+  background: radial-gradient(circle, rgba(244, 162, 97, 0.18), transparent 72%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero__inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 3rem;
   align-items: center;
@@ -425,11 +461,12 @@ h1, h2, h3, h4 {
   font-size: clamp(2.3rem, 5.2vw, 3.6rem);
   max-width: 22ch;
   margin-bottom: 1.4rem;
+  color: #FFFFFF;
 }
 
 .hero__subtitle {
   font-size: clamp(1.02rem, 1.6vw, 1.18rem);
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.8);
   max-width: 46ch;
   margin-bottom: 2.2rem;
 }
@@ -452,9 +489,18 @@ h1, h2, h3, h4 {
   gap: 0.5rem;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.85);
 }
-.hero__meta svg { width: 18px; height: 18px; color: var(--color-accent-dark); flex-shrink: 0; }
+.hero__meta svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+
+.hero .btn--ghost {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.hero .btn--ghost:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
 
 .hero__visual svg { width: 100%; height: auto; }
 .hero__visual .deco-dot { animation: float 6s ease-in-out infinite; }
@@ -957,8 +1003,9 @@ h1, h2, h3, h4 {
 
 .image-frame {
   position: relative;
-  width: 380px;
-  height: 560px;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 380 / 560;
   padding: 8px;
   border-radius: 28px;
   background: #fff;
