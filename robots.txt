@@ -1,0 +1,14 @@
+# =============================================================
+# VM Firma Contable — robots.txt
+# Sitio estático de 4 páginas: se permite el rastreo completo.
+# Si algún día se añade un panel privado o páginas de prueba,
+# se bloquean añadiendo aquí una línea "Disallow: /ruta/".
+# =============================================================
+
+User-agent: *
+Allow: /
+
+# Recursos que Google necesita para renderizar la página tal y
+# como la ve un usuario (no bloquear nunca css/, js/ ni assets/).
+
+Sitemap: https://vmfirmacontable.vercel.app/sitemap.xml

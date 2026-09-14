@@ -1,0 +1,24 @@
+{
+  "name": "VM Firma Contable · Valentina M. Rodas",
+  "short_name": "VM Firma Contable",
+  "description": "Asesoría contable y tributaria en Chigorodó, Urabá (Antioquia).",
+  "lang": "es-CO",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#FFFFFF",
+  "theme_color": "#F4A261",
+  "icons": [
+    {
+      "src": "/assets/logo-vm-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/LogoVM.png",
+      "sizes": "572x572",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
