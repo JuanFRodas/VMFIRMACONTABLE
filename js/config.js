@@ -171,7 +171,7 @@ window.VM_CONFIG = {
 
     {
       nombre: "MOTO CARS KMJ",
-      logo: "assets/clientes/motocarsLogo.jpg",
+      logo: "assets/clientes/MotocarsLogo.jpg",
       descripcion:
         "Un espacio dedicado a la venta de repuestos y accesorios para motocicletas en Chigorodó.",
       url: "https://www.instagram.com/motocarskmj/?hl=es",
