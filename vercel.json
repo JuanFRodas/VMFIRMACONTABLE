@@ -1,33 +1,48 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "comment": "Cabeceras de caché para los archivos estáticos. Si el sitio no se despliega en Vercel, este archivo es inofensivo: replica estas reglas en tu hosting (Apache: .htaccess / Netlify: _headers).",
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
       ]
     },
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
       ]
     },
     {
       "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
       ]
     },
     {
       "source": "/(.*).html",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }
