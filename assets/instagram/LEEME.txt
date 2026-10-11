@@ -1,0 +1,26 @@
+MINIATURAS DE LOS REELS
+=======================
+
+Guarda aqui las miniaturas verticales de los reels que se muestran en
+"Ultimas publicaciones" (inicio y pagina de Actualizaciones contables):
+
+  reel-1.jpg
+  reel-2.jpg
+  reel-3.jpg
+
+Formato ideal: vertical, 720 x 1280 px (o cualquier proporcion 9:16).
+Se recortan automaticamente a 4:5, asi que deja el texto importante
+centrado.
+
+Como sacar la miniatura: abre el reel en Instagram, haz una captura del
+primer fotograma y guardala con el nombre correspondiente.
+
+Mientras el archivo no exista, la tarjeta muestra un marcador con el
+icono de Instagram y el enlace al reel sigue funcionando.
+
+Opcional: si quieres que el reel se reproduzca solo al pasar el mouse,
+guarda tambien un .mp4 corto y sin audio (por ejemplo reel-1.mp4) y
+escribe su ruta en el campo "video" de js/config.js.
+
+Los enlaces y el orden de los reels se editan en js/config.js
+(VM_CONFIG.instagram.publicaciones).
